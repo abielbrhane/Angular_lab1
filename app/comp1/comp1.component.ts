@@ -25,10 +25,6 @@ export class CounterComponent{
         return false;
     }
 
-    setCounter(eve){
-        this.counterValue=eve.target.value;
-    }
-
     @Output() messageEmitter = new EventEmitter();
 
     emitMessage() {

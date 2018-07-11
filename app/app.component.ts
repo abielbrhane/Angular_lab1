@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
-  outputData='';
+  
 
   counter:number=5;
 
   showOutputData(data){
-    this.outputData = data;
+    this.counter = data;
   }
 }
