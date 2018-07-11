@@ -1,4 +1,4 @@
-import {Component,Output,EventEmitter} from '@angular/core';
+import {Component,Output,EventEmitter, Input} from '@angular/core';
 
 @Component({
     selector: 'app-comp1',
@@ -7,20 +7,14 @@ import {Component,Output,EventEmitter} from '@angular/core';
       <button (click)="decCounterMethod()" (click)="emitMessage()">-</button>
       <span>{{counterValue}}</span>
       <button (click)='incCounterMethod()' (click)="emitMessage()">+</button>
-    </div>
-    <div>
-        Incert default value:<input (input)='setCounter($event)'/>
-    </div>
-    
+    </div>    
     `
 })
 
 export class CounterComponent{
-   public counterValue;
 
-    constructor(){
-        this.counterValue=0;
-    }
+   @Input() counterValue:number;
+    
 
     incCounterMethod(){
       this.counterValue++;
